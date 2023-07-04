@@ -1,0 +1,279 @@
+2023-07-02 18:22:32 [main] INFO  c.socialnetwork.main.MainApplication - Starting MainApplication using Java 17.0.7 with PID 20228 (C:\Users\Eren\Desktop\SocialNetwork\main\target\classes started by Eren in C:\Users\Eren\Desktop\SocialNetwork\main)
+2023-07-02 18:22:32 [main] DEBUG c.socialnetwork.main.MainApplication - Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-07-02 18:22:32 [main] INFO  c.socialnetwork.main.MainApplication - The following 1 profile is active: "dev"
+2023-07-02 18:22:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-02 18:22:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-02 18:22:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+2023-07-02 18:22:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-02 18:22:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-02 18:22:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.socialnetwork.auth.repository.RoleRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2023-07-02 18:22:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.socialnetwork.auth.repository.UserRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2023-07-02 18:22:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 MongoDB repository interfaces.
+2023-07-02 18:22:32 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8181 (http)
+2023-07-02 18:22:32 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-02 18:22:32 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-07-02 18:22:33 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-02 18:22:33 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 880 ms
+2023-07-02 18:22:33 [main] ERROR o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\Eren\Desktop\SocialNetwork\main\target\classes\com\socialnetwork\main\config\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'applicationConfig' defined in file [C:\Users\Eren\Desktop\SocialNetwork\main\target\classes\com\socialnetwork\main\config\ApplicationConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.socialnetwork.auth.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2023-07-02 18:22:33 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-07-02 18:22:33 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2023-07-02 18:22:33 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-07-02 18:22:33 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles dev are currently active).
+
+2023-07-02 18:24:08 [main] INFO  c.socialnetwork.main.MainApplication - Starting MainApplication using Java 17.0.7 with PID 24088 (C:\Users\Eren\Desktop\SocialNetwork\main\target\classes started by Eren in C:\Users\Eren\Desktop\SocialNetwork\main)
+2023-07-02 18:24:08 [main] DEBUG c.socialnetwork.main.MainApplication - Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-07-02 18:24:08 [main] INFO  c.socialnetwork.main.MainApplication - The following 1 profile is active: "dev"
+2023-07-02 18:24:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-02 18:24:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-02 18:24:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2023-07-02 18:24:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-02 18:24:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-02 18:24:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.socialnetwork.auth.repository.RoleRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2023-07-02 18:24:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.socialnetwork.auth.repository.UserRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2023-07-02 18:24:08 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 MongoDB repository interfaces.
+2023-07-02 18:24:09 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8181 (http)
+2023-07-02 18:24:09 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-02 18:24:09 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-07-02 18:24:09 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-02 18:24:09 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 880 ms
+2023-07-02 18:24:09 [main] ERROR o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\Eren\Desktop\SocialNetwork\main\target\classes\com\socialnetwork\main\config\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'applicationConfig' defined in file [C:\Users\Eren\Desktop\SocialNetwork\main\target\classes\com\socialnetwork\main\config\ApplicationConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'userRepository' defined in com.socialnetwork.auth.repository.UserRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot resolve reference to bean 'jpaSharedEM_entityManagerFactory' while setting bean property 'entityManager'
+2023-07-02 18:24:09 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-07-02 18:24:09 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2023-07-02 18:24:09 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-07-02 18:24:09 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (the profiles dev are currently active).
+
+2023-07-02 18:27:52 [main] INFO  c.socialnetwork.main.MainApplication - Starting MainApplication using Java 17.0.7 with PID 18412 (C:\Users\Eren\Desktop\SocialNetwork\main\target\classes started by Eren in C:\Users\Eren\Desktop\SocialNetwork\main)
+2023-07-02 18:27:52 [main] DEBUG c.socialnetwork.main.MainApplication - Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-07-02 18:27:52 [main] INFO  c.socialnetwork.main.MainApplication - The following 1 profile is active: "dev"
+2023-07-02 18:27:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-02 18:27:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-02 18:27:52 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.socialnetwork.auth.repository.RoleRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2023-07-02 18:27:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.socialnetwork.auth.repository.UserRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2023-07-02 18:27:53 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21 ms. Found 0 MongoDB repository interfaces.
+2023-07-02 18:27:53 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8181 (http)
+2023-07-02 18:27:53 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-02 18:27:53 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-07-02 18:27:53 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-02 18:27:53 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 831 ms
+2023-07-02 18:27:53 [main] ERROR o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\Eren\Desktop\SocialNetwork\main\target\classes\com\socialnetwork\main\config\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'applicationConfig' defined in file [C:\Users\Eren\Desktop\SocialNetwork\main\target\classes\com\socialnetwork\main\config\ApplicationConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.socialnetwork.auth.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-07-02 18:27:53 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-07-02 18:27:53 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2023-07-02 18:27:53 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-07-02 18:27:53 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.socialnetwork.auth.config.ApplicationConfig required a bean of type 'com.socialnetwork.auth.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.socialnetwork.auth.repository.UserRepository' in your configuration.
+
+2023-07-02 18:28:34 [main] INFO  c.socialnetwork.main.MainApplication - Starting MainApplication using Java 17.0.7 with PID 13012 (C:\Users\Eren\Desktop\SocialNetwork\main\target\classes started by Eren in C:\Users\Eren\Desktop\SocialNetwork\main)
+2023-07-02 18:28:34 [main] DEBUG c.socialnetwork.main.MainApplication - Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-07-02 18:28:34 [main] INFO  c.socialnetwork.main.MainApplication - The following 1 profile is active: "dev"
+2023-07-02 18:28:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-02 18:28:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-02 18:28:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.socialnetwork.auth.repository.RoleRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2023-07-02 18:28:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationExtensionSupport - Spring Data MongoDB - Could not safely identify store assignment for repository candidate interface com.socialnetwork.auth.repository.UserRepository; If you want this repository to be a MongoDB repository, consider annotating your entities with one of these annotations: org.springframework.data.mongodb.core.mapping.Document (preferred), or consider extending one of the following types with your repository: org.springframework.data.mongodb.repository.MongoRepository
+2023-07-02 18:28:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 0 MongoDB repository interfaces.
+2023-07-02 18:28:35 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8181 (http)
+2023-07-02 18:28:35 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-02 18:28:35 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-07-02 18:28:35 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-02 18:28:35 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 795 ms
+2023-07-02 18:28:35 [main] ERROR o.s.b.w.e.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter' defined in file [C:\Users\Eren\Desktop\SocialNetwork\main\target\classes\com\socialnetwork\main\config\JwtAuthenticationFilter.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'applicationConfig' defined in file [C:\Users\Eren\Desktop\SocialNetwork\main\target\classes\com\socialnetwork\main\config\ApplicationConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.socialnetwork.auth.repository.UserRepository' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2023-07-02 18:28:35 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2023-07-02 18:28:35 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2023-07-02 18:28:35 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-07-02 18:28:35 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.socialnetwork.auth.config.ApplicationConfig required a bean of type 'com.socialnetwork.auth.repository.UserRepository' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.socialnetwork.auth.repository.UserRepository' in your configuration.
+
+2023-07-02 18:30:33 [main] INFO  c.socialnetwork.main.MainApplication - Starting MainApplication using Java 17.0.7 with PID 13540 (C:\Users\Eren\Desktop\SocialNetwork\main\target\classes started by Eren in C:\Users\Eren\Desktop\SocialNetwork\main)
+2023-07-02 18:30:33 [main] DEBUG c.socialnetwork.main.MainApplication - Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-07-02 18:30:33 [main] INFO  c.socialnetwork.main.MainApplication - The following 1 profile is active: "dev"
+2023-07-02 18:30:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-02 18:30:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-02 18:30:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 2 MongoDB repository interfaces.
+2023-07-02 18:30:34 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8181 (http)
+2023-07-02 18:30:34 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-07-02 18:30:34 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-07-02 18:30:34 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-07-02 18:30:34 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 827 ms
+2023-07-02 18:30:34 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.2"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/17.0.7+8-LTS-224"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@6b649efa]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-07-02 18:30:34 [cluster-ClusterId{value='64a1981a9dccbb6ff8e2a539', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=17, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=16268900}
+2023-07-02 18:30:34 [main] DEBUG c.s.m.config.JwtAuthenticationFilter - Filter 'jwtAuthenticationFilter' configured for use
+2023-07-02 18:30:34 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@399af6dc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48fc0211, org.springframework.security.web.context.SecurityContextHolderFilter@6e517c9e, org.springframework.security.web.header.HeaderWriterFilter@7dd3981e, org.springframework.security.web.authentication.logout.LogoutFilter@131ba005, com.socialnetwork.auth.config.JwtAuthenticationFilter@5b742bc8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@76b5a559, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6723cce7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ae2702a, org.springframework.security.web.session.SessionManagementFilter@58182b96, org.springframework.security.web.access.ExceptionTranslationFilter@42ecc554, org.springframework.security.web.access.intercept.AuthorizationFilter@5e158f33]
+2023-07-02 18:30:35 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8181 (http) with context path ''
+2023-07-02 18:30:35 [main] INFO  c.socialnetwork.main.MainApplication - Started MainApplication in 1.969 seconds (process running for 2.299)
+2023-07-02 18:30:35 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-07-02 18:30:35 [main] ERROR o.s.boot.SpringApplication - Application run failed
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:772)
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:753)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:317)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1304)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1293)
+	at com.socialnetwork.auth.MainApplication.main(MainApplication.java:11)
+Caused by: org.springframework.data.mongodb.UncategorizedMongoDbException: Command failed with error 13 (Unauthorized): 'command find requires authentication' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "command find requires authentication", "code": 13, "codeName": "Unauthorized"}
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:136)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2808)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:2744)
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2448)
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2430)
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:834)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:352)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:134)
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:61)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:288)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:77)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:218)
+	at jdk.proxy2/jdk.proxy2.$Proxy87.findAll(Unknown Source)
+	at com.socialnetwork.auth.config.StartupConfig.run(StartupConfig.java:21)
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:769)
+	... 5 common frames omitted
+Caused by: com.mongodb.MongoQueryException: Command failed with error 13 (Unauthorized): 'command find requires authentication' on server localhost:27017. The full response is {"ok": 0.0, "errmsg": "command find requires authentication", "code": 13, "codeName": "Unauthorized"}
+	at com.mongodb.internal.operation.FindOperation.lambda$execute$1(FindOperation.java:336)
+	at com.mongodb.internal.operation.OperationHelper.lambda$withSourceAndConnection$0(OperationHelper.java:356)
+	at com.mongodb.internal.operation.OperationHelper.withSuppliedResource(OperationHelper.java:381)
+	at com.mongodb.internal.operation.OperationHelper.lambda$withSourceAndConnection$1(OperationHelper.java:355)
+	at com.mongodb.internal.operation.OperationHelper.withSuppliedResource(OperationHelper.java:381)
+	at com.mongodb.internal.operation.OperationHelper.withSourceAndConnection(OperationHelper.java:354)
+	at com.mongodb.internal.operation.FindOperation.lambda$execute$2(FindOperation.java:329)
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:67)
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:340)
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:79)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:191)
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:133)
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:90)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:2731)
+	... 33 common frames omitted
+2023-07-02 18:31:26 [main] INFO  c.socialnetwork.main.MainApplication - Starting MainApplication using Java 17.0.7 with PID 19476 (C:\Users\Eren\Desktop\SocialNetwork\main\target\classes started by Eren in C:\Users\Eren\Desktop\SocialNetwork\main)
+2023-07-02 18:31:26 [main] DEBUG c.socialnetwork.main.MainApplication - Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-07-02 18:31:26 [main] INFO  c.socialnetwork.main.MainApplication - The following 1 profile is active: "dev"
+2023-07-02 18:31:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-02 18:31:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-02 18:31:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 2 MongoDB repository interfaces.
+2023-07-02 18:31:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-02 18:31:26 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-02 18:31:26 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'roleRepository' defined in com.socialnetwork.auth.repository.RoleRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in com.socialnetwork.auth.repository.RoleRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] for bean 'roleRepository' since there is already [Root bean: class [org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in com.socialnetwork.auth.repository.RoleRepository defined in @EnableMongoRepositories declared on MainApplication] bound.
+2023-07-02 18:31:26 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-07-02 18:31:26 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'roleRepository', defined in com.socialnetwork.auth.repository.RoleRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration, could not be registered. A bean with that name has already been defined in com.socialnetwork.auth.repository.RoleRepository defined in @EnableMongoRepositories declared on MainApplication and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+
+2023-07-02 18:32:11 [main] INFO  c.socialnetwork.main.MainApplication - Starting MainApplication using Java 17.0.7 with PID 3036 (C:\Users\Eren\Desktop\SocialNetwork\main\target\classes started by Eren in C:\Users\Eren\Desktop\SocialNetwork\main)
+2023-07-02 18:32:11 [main] DEBUG c.socialnetwork.main.MainApplication - Running with Spring Boot v3.0.4, Spring v6.0.6
+2023-07-02 18:32:11 [main] INFO  c.socialnetwork.main.MainApplication - The following 1 profile is active: "dev"
+2023-07-02 18:32:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-02 18:32:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-07-02 18:32:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 2 MongoDB repository interfaces.
+2023-07-02 18:32:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2023-07-02 18:32:11 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-07-02 18:32:11 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'roleRepository' defined in com.socialnetwork.auth.repository.RoleRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in com.socialnetwork.auth.repository.RoleRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] for bean 'roleRepository' since there is already [Root bean: class [org.springframework.data.mongodb.repository.support.MongoRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodNames=null; destroyMethodNames=null; defined in com.socialnetwork.auth.repository.RoleRepository defined in @EnableMongoRepositories declared on MainApplication] bound.
+2023-07-02 18:32:11 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-07-02 18:32:11 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The bean 'roleRepository', defined in com.socialnetwork.auth.repository.RoleRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration, could not be registered. A bean with that name has already been defined in com.socialnetwork.auth.repository.RoleRepository defined in @EnableMongoRepositories declared on MainApplication and overriding is disabled.
+
+Action:
+
+Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+

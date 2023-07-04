@@ -1,0 +1,83 @@
+version: '3.7'
+services:
+  mongodb:
+    image: mongo:6-jammy
+    ports:
+      - '27017:27017'
+    volumes:
+        - mongodb_data_container:/data/db
+    container_name: mongodb
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:latest
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "2181:2181"
+
+
+  kafka:
+    image: confluentinc/cp-kafka:latest
+    container_name: kafka
+    ports:
+      - "29092:29092"
+    depends_on:
+      - zookeeper
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+
+  postgres:
+    container_name: postgres
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-cvqstestdb}
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-dbtestpassword}
+    volumes:
+      - postgres_data_container:/var/lib/postgresql/data
+
+  auth:
+    depends_on:
+      - postgres
+      - kafka
+    build: ./auth/
+    ports:
+      - 8181:8181
+    environment:
+      PROFILE: dev
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/cvqstestdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: dbtestpassword
+    container_name: auth
+    volumes:
+      - logs:/logs
+
+  main:
+    depends_on:
+      - mongodb
+      - kafka
+    build: ./main/
+    ports:
+      - 8282:8282
+    container_name: main
+    volumes:
+      - logs:/logs
+
+volumes:
+  mongodb_data_container:
+    driver: local
+  postgres_data_container:
+    driver: local
+  logs:
+    driver: local
+  zookeeper_data:
+    driver: local
+  kafka_data:
+    driver: local
