@@ -7,6 +7,7 @@ import com.socialnetwork.auth.dto.UserDto;
 import com.socialnetwork.auth.entity.User;
 import com.socialnetwork.auth.exception.UserAlreadyExistException;
 import com.socialnetwork.auth.exception.UserNotFoundException;
+import com.socialnetwork.auth.jwt.JwtService;
 import com.socialnetwork.auth.log.CustomLogDebug;
 import com.socialnetwork.auth.repository.RoleRepository;
 import com.socialnetwork.auth.repository.UserRepository;
@@ -19,6 +20,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -97,17 +100,22 @@ public class AuthenticationService {
 
 
     /**
-     * Get User Information  with JWT
-     * @param  token - JWT
-     * @return  UserDto - User Information
+     * Get User Roles with username
+     * @param username
+     * @return List<String> - User Roles
      */
+
     @CustomLogDebug
-    public UserDto getUserDto(String token){
-        User user = userRepository.findByUsernameAndDeletedFalse(jwtService.findUsername(token));
-        if (user == null){
-            throw new UserNotFoundException("User not found");
+    public List<String> getUserRoles(String username) {
+
+        User user =userRepository.findUserByUsernameAndDeletedFalse(username).orElse(null);
+
+        if (user != null){
+            List<String> roles = user.getRoles().stream().map(x -> x.getName()).toList();
+            return roles;
         }
-        return UserDto.builder().username(user.getUsername()).nameSurname(user.getNameSurname()).roles(user.getRoles()).build();
+
+        return new ArrayList<>();
     }
 
 }

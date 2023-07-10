@@ -38,7 +38,6 @@ public class UserService {
             groupId = "${haydikodlayalim.kafka.group.id}"
     )
     public void listenUserCreate(@Payload KMessage message) {
-        System.out.println(message.getMessage());
         JSONObject jsonObject = new JSONObject(message.getMessage());
         User user = User.builder()
                 .followers(new ArrayList<>())
@@ -95,12 +94,12 @@ public class UserService {
         User user = userRepository.findByUsername(username).orElseThrow(() -> new GenericException("User not found"));
         User userToFollow = userRepository.findByUsername(usernameToFollow).orElseThrow(() -> new GenericException("User not found"));
 
-        user.getFollowing().stream().forEach(following -> {
+        user.getFollowing().forEach(following -> {
             if (following.equals(usernameToFollow)) {
                 throw new GenericException("User already followed");
             }
         });
-        userToFollow.getFollowers().stream().forEach(follower -> {
+        userToFollow.getFollowers().forEach(follower -> {
             if (follower.equals(username)) {
                 throw new GenericException("User already followed");
             }
@@ -120,13 +119,13 @@ public class UserService {
         User user = userRepository.findByUsername(username).orElseThrow(() -> new GenericException("User not found"));
         User userToUnFollow = userRepository.findByUsername(usernameToUnFollow).orElseThrow(() -> new GenericException("User not found"));
 
-        user.getFollowing().stream().forEach(following -> {
+        user.getFollowing().forEach(following -> {
             if (following.equals(usernameToUnFollow)) {
                 user.getFollowing().remove(usernameToUnFollow);
                 user.setFollowerCount(user.getFollowerCount() - 1);
             }
         });
-        userToUnFollow.getFollowers().stream().forEach(follower -> {
+        userToUnFollow.getFollowers().forEach(follower -> {
             if (follower.equals(username)) {
                 userToUnFollow.getFollowers().remove(username);
                 userToUnFollow.setFollowingCount(userToUnFollow.getFollowingCount() - 1);

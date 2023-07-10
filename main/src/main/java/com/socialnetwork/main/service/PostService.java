@@ -157,7 +157,7 @@ public class PostService {
     public void deleteCommentToPost(String postId,String commentId,String username){
         Post post = postRepository.findById(postId).orElseThrow(() -> new GenericException("Post not found"));
         int count = post.getComments().size();
-        post.setComments(post.getComments().stream().filter(comment -> !comment.getId().equals(commentId)).toList());
+        post.setComments(post.getComments().stream().filter(comment -> !comment.getId().equals(commentId) && comment.getUsername().equals(username)).toList());
         if(count == post.getComments().size()){
             throw new GenericException("Comment not found");
         }

@@ -56,4 +56,11 @@ public class PostController {
         postService.commentToPost(commentDto);
     }
 
+    @CustomLogInfo
+    @PostMapping("/comment/delete")
+    public void deleteComment(@RequestParam String id, @RequestParam String commentId){
+        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+        postService.deleteCommentToPost(id, auth.getName(), commentId);
+    }
+
 }
